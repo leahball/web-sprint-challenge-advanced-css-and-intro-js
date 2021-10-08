@@ -23,10 +23,24 @@ Commit your code regularly and meaningfully.
 Please answer the following questions below, you may edit the readme file to include your answers below the question.
 
 1. How would you describe acessibility on the web to someone new to programming?
+
+Answer: The web is a powerful tool and it is up to web developers to make sure that tool is accessible to all different people who need to access it. This includes people who use mobile devices, those with slow internet connections, and folks with various nuerological, auditory, cognitive or physical disabilities. Accessiilty on the web means developing based on the universal design theory-- that designing for the "furthest out" individuals in mind will benefit everyone. 
+
 2. Talk about 3 different things you can do to ensure your website is accessible. 
+
+Answer: The way we achieve website accessibility is through responsive design-- design with responsive units that allows text, visuals and navigation to easily enlarge and fit the needed screen for the individual, implementing semantic html and alt tags to make sites easy to navigate for screen readers, using high contrast and readablbe text colors and much more!
+
 3. How would you explain the concept of a variable to someone new to programming?
+
+Answer: A variablbe is a container for value used in code that can be labeled, stored, updated and referenced. Variables are used in Javascript-- the worlds most widely used programming language that adds functionality and interactivity to websites.
+
 4. What is the purpose of using functions in code?
+
+Answer: Functions are ways to simplify and create code we can use over and over to keep our code DRY. Similar to running small computer programs.
+
 5. How do you access a key inside of an object inside of an array?
+
+Answer: console.log(array[index number of the object].key);
 
 You are expected to be able to answer questions in these areas. Your responses contribute to your Sprint Challenge grade. 
 
