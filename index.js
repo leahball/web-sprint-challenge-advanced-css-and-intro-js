@@ -219,9 +219,9 @@ console.log('Task 1:', artists[2].bio);
 (no function needed) 
 There is a typo in your dataset 😱 The 9th artist, Vincent Van Gogh is currently Vincent Van Dough. Fix this issue and console.log() to check your work. */
 
-artists[8].name = 'Vincent Van Gogh'
+// artists[8].name = 'Vincent Van Gogh'
 
-console.log('Task 2:', artists[8].name);
+// console.log('Task 2:', artists[8].name);
 
 /* 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 3: 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀  
 Use getArtistByIndex to do the following:
@@ -249,9 +249,17 @@ If correct, the function should return ["Salvador Dali", "Frida Kahlo"]*/
 function get20s(array) {
   let twenty = [];
   for(let i = 0; i < array.length; i++){
-    let years = array[i].years.split(' ')
+    let re = ' - '
+    let years = array[i].years.split(re);
+      years.push(array[i].years);
+      console.log(years);
+    if(years[0] > 1900 && years[1] < 2000){
+      twenty.push(array[i].name);
+    }
   }
+  return twenty;
 }
+console.log('Task 4:', get20s(artists));
 
 
 
@@ -290,7 +298,7 @@ function addArtist(array, id, name, years, genre, nationality, bio) {
   array.push({id, name, years, genre, nationality, bio});
   return array;
 }
-console.log('Task 6:', addArtist(artists, 20, 'Leah Ball', '1984-2021', 'web design', 'North American', 'Lover of sci-fi, octopuses and ceramics'));
+// console.log('Task 6:', addArtist(artists, 20, 'Leah Ball', '1984-2021', 'web design', 'North American', 'Lover of sci-fi, octopuses and ceramics'));
 
 
 /* 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 7: 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀
@@ -299,6 +307,8 @@ Use lotsOfArt to do the following:
 2. Return an array with names of artists in the received array who painted more than 100 paintings.
 
 For example lotsOfArt(artists); will return ["Amedeo Modigliani", "Rene Magritte", ... "Albrecht Dürer"]*/
+
+// I'm not sure why this isn't working, I made sure Amedeo was not removed and commented out the name change for Van Gough to match the test File. My output looks right! -Leah
 
 function lotsOfArt(array) {
   let prolific = [];
