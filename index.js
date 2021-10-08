@@ -234,7 +234,7 @@ Example, if getArtistByIndex is invoked with the artists array and the number 0,
 function getArtistByIndex(array, number) {
   return `the artist at index ${array[number].id} is ${array[number].name}`;
 }
-console.log('Task 3:', getArtistByIndex(artists, 0));
+console.log('Task 3:', getArtistByIndex(artists, 18));
 
 
 /* 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 4: 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 
@@ -247,7 +247,10 @@ If correct, the function should return ["Salvador Dali", "Frida Kahlo"]*/
 // Hint - Look up the .split() method
 
 function get20s(array) {
-  /*Your Code Here*/
+  let twenty = [];
+  for(let i = 0; i < array.length; i++){
+    let years = array[i].years.split(' ')
+  }
 }
 
 
@@ -265,7 +268,7 @@ function removeArtist(array, number) {
   array.splice(number, 1);
   return array.length;
 }
-console.log('Task 5:', removeArtist(artists, 0));
+console.log('Task 5:', removeArtist(artists, 2));
 
 /* 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 6: 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 
 Use addArtist to do the following: 
@@ -285,9 +288,9 @@ Example: addArtist(artists) should return the artists array with the above objec
 
 function addArtist(array, id, name, years, genre, nationality, bio) {
   array.push({id, name, years, genre, nationality, bio});
-  return array
+  return array;
 }
-console.log('Task 6:', addArtist(artists, 'Leah Ball', '1984-2021', 'web design', 'North American', 'Lover of sci-fi, octopuses and ceramics'));
+console.log('Task 6:', addArtist(artists, 20, 'Leah Ball', '1984-2021', 'web design', 'North American', 'Lover of sci-fi, octopuses and ceramics'));
 
 
 /* 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 7: 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀
@@ -297,10 +300,16 @@ Use lotsOfArt to do the following:
 
 For example lotsOfArt(artists); will return ["Amedeo Modigliani", "Rene Magritte", ... "Albrecht Dürer"]*/
 
-function lotsOfArt(/*Your Code Here*/) {
-  /*Your Code Here*/
+function lotsOfArt(array) {
+  let prolific = [];
+  for(let i = 0; i < array.length; i++){
+    if(artists[i].paintings > 100){
+      prolific.push(artists[i].name);
+    }
+  }
+return prolific;
 }
-
+console.log('Task 7:', lotsOfArt(artists));
 
 /* ***** END OF TASKS ***** */
 
